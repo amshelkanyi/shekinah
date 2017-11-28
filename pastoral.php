@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'include/header.php';
 ?>
 <div class="top-heading">
     <!--start-wrap-->
@@ -83,4 +83,4 @@ include 'header.php';
     </div>
 </div>
 <?php
-include 'footer.php';
+include 'include/footer.php';

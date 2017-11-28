@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'include/header.php';
 ?>
 <!--start blog-->
 <div class="blog-content">
@@ -117,5 +117,5 @@ include 'header.php';
             </div>
             <?php
             include 'sidebar.php';
-            include 'footer.php';
+            include 'include/footer.php';
             

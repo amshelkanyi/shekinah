@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include 'include/header.php';
 ?>
 <!-- start slider -->
 <div class="main-con">
@@ -181,5 +181,5 @@ include "header.php";
                     </div>
                 </div>
                 <?php
-                include "footer.php";
+                include 'include/footer.php';
                 

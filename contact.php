@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'include/header.php';
 ?>
 
 <!--top- heading-->
@@ -66,4 +66,4 @@ include 'header.php';
             </div>
 <?php
 include 'sidebar.php';
-include 'footer.php';
+include 'include/footer.php';
