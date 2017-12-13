@@ -10,12 +10,12 @@
         <link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
         <!-- jQuery -->
         <!--start slider-->
-        <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/jquery.min.js"></script>
         <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
         <script type='text/javascript' src="js/jquery.easing.1.3.js"></script>
         <script type='text/javascript' src="js/camera.min.js"></script>
-        <script type="text/javascript" src="js/responsive-nav.js"></script>
+    
     </head>
 
     <body>
@@ -26,11 +26,11 @@
                 <!--start-logo-->
                 <div class="logo">
                     <div id="img">
-                        <img src="logo.jpg">
+                        <img src="images/logo.jpg">
                     </div>
                     <a href="index.html">
                         <h1>
-                            <span class="animated zoomIn" />SHEKINAH PENTECOSTAL CHURCH</h1>
+                            <div class="animated zoomIn" />SHEKINAH PENTECOSTAL CHURCH</h1>
                     </a>
                 </div>
                 <!--end-logo-->
@@ -46,6 +46,7 @@
                         <li><a href="contact.php">contact us</a></li>
                         <div class="clear"> </div>
                     </ul>
+                        <script type="text/javascript" src="js/responsive-nav.js"></script>
                 </nav>
                 <div class="clear"> </div>
                 <!--end-menu-->
