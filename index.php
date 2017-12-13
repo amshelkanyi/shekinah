@@ -1,5 +1,15 @@
 <?php
+include 'include/crud.php';
+$crud=new crud();
+$sql="select * from picture where placement='slider'";
+$sql1="select * from picture where placement='panel'";
+
+$slider=$crud->getData($sql);
+$panel=$crud->getData($sql1);
+
 include 'include/header.php';
+
+
 ?>
 <!-- start slider -->
 <div class="main-con">
@@ -9,37 +19,13 @@ include 'include/header.php';
         <div class="wrap">
             <div class="fluid_container">
                 <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
-                    <div data-thumb="images/them1.png" data-src="images/SAM_5280.JPG">
-                        <div class="camera_caption fadeFromBottom">
-                            <h2>SERVICE</h2>
-                            <p>Revival voices</p>
+                    <?php
+                    foreach ($slider as $key => $value) {?>
+                        <div data-src="images/home/<?php echo $value['name']; ?>">
                         </div>
-                    </div>
-                    <div data-thumb="images/them3.JPG" data-src="images/SAM_3317.JPG">
-                        <div class="camera_caption fadeFromBottom">
-                            <h2>TAKE IT BY FORCE</h2>
-                            <p>Powerful confrence </p>
-                        </div>
-                    </div>
-                    <div data-thumb="images/them4.JPG" data-src="images/SAM_3395.JPG">
-                        <div class="camera_caption fadeFromBottom">
-                            <h2>Shekinah Choir</h2>
-                            <p>Marvelous voices singing praise and worship </p>
-                        </div>
-                    </div>
-                    <div data-thumb="images/them5.JPG" data-src="images/SAM_3512.JPG">
-                        <div class="camera_caption fadeFromBottom">
-                            <h2>SUNDAY SCHOOL</h2>
-                            <p>Even the Kids are brought up praising and worshipping God.</p>
-                        </div>
-                    </div>
-                    <div data-thumb="images/them6.JPG" data-src="images/SAM_3513.JPG">
-                        <div class="camera_caption fadeFromBottom">
-                            <h2>YOUTH</h2>
-                            <p>Youth group of young and talented minds.</p>
-                        </div>
-                    </div>
-
+                    <?php
+                    }
+                    ?>
                 </div>
                 <!-- #camera_wrap_2 -->
             </div>
@@ -84,89 +70,37 @@ include 'include/header.php';
             </div>
 
             <!--end home-page-con-->
-            <div class="main_btm">
+            
 
                 <!--start-mfp -->
-                <div id="small-dialog1" class="mfp-hide">
+                <?php
+                foreach ($panel as $key => $myPanel) {?>
+                    <div id="small-dialog1" class="mfp-hide">
                     <div class="pop_up">
-                        <h2>Helping the Needy</h2>
-                        <img src="images/IMG_4801.JPG" alt=" " />
-                        <p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <img src="images/home/<?php echo $myPanel['name'];?>"/>
                     </div>
                 </div>
-                <div class="main_btm">
-                    <div id="small-dialog2" class="mfp-hide">
-                        <div class="pop_up">
-                            <h2>RUIRU MISSION</h2>
-                            <img src="images/ruiru/SAM_3212.JPG" alt=" " />
-                            <p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        </div>
-                    </div>
-                    <div class="main_btm">
-                        <div id="small-dialog3" class="mfp-hide">
-                            <div class="pop_up">
-                                <h2>TAKE IT BY FORCE</h2>
-                                <img src="images/SAM_3317.JPG" alt=" " />
-                                <p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            </div>
-                        </div>
-                        <div class="main_btm">
-                            <div id="small-dialog4" class="mfp-hide">
-                                <div class="pop_up">
-                                    <h2>GOOD SAMARITAN</h2>
-                                    <img src="images/SAM_3287.JPG" alt=" " />
-                                    <p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                </div>
-                            </div>
-                            <!--end-mfp -->
+                <?php
+                }?>
+                         <!--end-mfp -->
                             <!--start-content-->
                             <div class="gallery">
                                 <div class="clear"> </div>
                                 <div class="container">
 
                                     <div id="gallerylist">
+                                        <?php 
+                                        foreach($panel as $key=>$val){?>
 
                                         <div class="gallerylist-wrapper">
                                             <a class="popup-with-zoom-anim" href="#small-dialog1">
-                                                <img src="images/IMG_4801.JPG" alt="Image 1" />
+                                                <img src="images/home/<?php echo $val['name'];?>"  />
                                                 <span><img src="images/plus.png" alt=" "/> </span>
-                                                <div class="desc">
-                                                    <h2>Helping the needy</h2>
-                                                    <h3>june 15,2014</h3>
-                                                </div>
                                             </a>
                                         </div>
-                                        <div class="gallerylist-wrapper">
-                                            <a class="popup-with-zoom-anim" href="#small-dialog2">
-                                                <img src="images/ruiru/SAM_3212.JPG" alt="Image 2" />
-                                                <span><img src="images/plus.png" alt=" "/> </span>
-                                                <div class="desc">
-                                                    <h2>RUIRU MISSION</h2>
-                                                    <h3>june 15,2014</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="gallerylist-wrapper">
-                                            <a class="popup-with-zoom-anim" href="#small-dialog3">
-                                                <img src="images/SAM_3317.JPG" alt="SAM_3317" />
-                                                <span><img src="images/plus.png" alt=" "/> </span>
-                                                <div class="desc">
-                                                    <h2>TAKE IT BY FORCE</h2>
-                                                    <h3>june 15,2014</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="gallerylist-wrapper">
-                                            <a class="popup-with-zoom-anim" href="#small-dialog4">
-                                                <img src="images/SAM_3287.JPG" alt="SAM_3389" />
-                                                <span><img src="images/plus.png" alt=" "/> </span>
-                                                <div class="desc">
-                                                    <h2>GOOD SAMARITAN</h2>
-                                                    <h3>june 15,2014</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-
+                                        <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
