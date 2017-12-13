@@ -116,6 +116,6 @@ include 'include/header.php';
                 <!--end slider-->
             </div>
             <?php
-            include 'sidebar.php';
+            include 'include/sidebar.php';
             include 'include/footer.php';
             

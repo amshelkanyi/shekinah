@@ -65,5 +65,5 @@ include 'include/header.php';
                 </div>
             </div>
 <?php
-include 'sidebar.php';
+include 'include/sidebar.php';
 include 'include/footer.php';
