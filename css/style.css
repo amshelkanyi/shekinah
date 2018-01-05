@@ -3633,3 +3633,8 @@ button::-moz-focus-inner {
 		font-size: 12px;
 	}
 }
+
+/*facebook media plugin*/
+#plugin{
+  margin-top: 2%;  
+}
