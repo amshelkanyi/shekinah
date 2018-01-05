@@ -6,19 +6,8 @@
                 <h3>About Shekinah</h3>
                 <p>Headed by Bishop Meliyio.<br /> Our core values are love, Holiness, faithfulness, excellence, truthfullness, integrity and Study of Gods word daily </p>
             </div>
-            <div class="fgrid">
-                <h3>twitter widget</h3>
-                <div>
-                    <p><a href="#">@Lorem ipsum</a> What an awesome design with great functioality:)</p>
-                    <a href="#">about 1 hour ago</a>
-                </div>
-                <div>
-                    <p><a href="#">@Lorem ipsum</a> What an awesome design with great functioality:)</p>
-                    <a href="#">about 2 hour ago</a>
-                </div>
-                <div>
-                    <p>Follow <a href="#">@Lorem ipsum</a></p>
-                </div>
+            <div class="fgrid" id="plugin">
+                <div class="fb-page" data-href="https://web.facebook.com/Shekinah-Pentecostal-Church-Kiserian-500552560031939/" data-tabs="timeline" data-height="250" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
             </div>
             <div class="fgrid">
                 <h3> contact us </h3>
