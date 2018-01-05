@@ -10,15 +10,26 @@
         <link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
         <!-- jQuery -->
         <!--start slider-->
+        <script src="js/shekinah.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script src="js/jquery.min.js"></script>
         <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
         <script type='text/javascript' src="js/jquery.easing.1.3.js"></script>
         <script type='text/javascript' src="js/camera.min.js"></script>
-    
+
     </head>
 
     <body>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
         <!--star-wrap-->
         <div class="wrap">
             <!--header-->
@@ -39,14 +50,14 @@
                     <a class="toggleMenu" href="#"><img src="images/nav.png" alt=" " /></a>
                     <ul class="nav">
                         <div class="animated slideInRight" />
-                        <li class="active"><a href="index.php">home</a></li>
-                        <li><a href="pastoral.php">leadership</a></li>
-                        <li><a href="blog.php">blog</a></li>
-                        <li><a href="gallery.php">gallery</a></li>
-                        <li><a href="contact.php">contact us</a></li>
+                        <li class="active" ><a href="index.php">home</a></li>
+                        <li ><a href="pastoral.php">leadership</a></li>
+                        <li ><a href="blog.php">blog</a></li>
+                        <li ><a href="gallery.php">gallery</a></li>
+                        <li ><a href="contact.php">contact us</a></li>
                         <div class="clear"> </div>
                     </ul>
-                        <script type="text/javascript" src="js/responsive-nav.js"></script>
+                    <script type="text/javascript" src="js/responsive-nav.js"></script>
                 </nav>
                 <div class="clear"> </div>
                 <!--end-menu-->
